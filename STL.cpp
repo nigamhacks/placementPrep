@@ -211,5 +211,87 @@ int main()
         // cout << i->first << endl;
     }
 
+    cout << endl;
+
+    cout << "----------Algorithms------------" << endl;
+
+    vector<int> v;
+
+    v.push_back(1);
+    v.push_back(2);
+    v.push_back(3);
+    v.push_back(4);
+    v.push_back(5);
+    v.push_back(6);
+    // lower_Bound => It is used to return an iterator pointing to the first element in the range
+    // upper_bound=> It is used to return an iterator pointing to the last element in the range
+
+    cout << "Binary Search " << binary_search(v.begin(), v.end(), 2) << endl;
+    cout << "Lower Bound " << lower_bound(v.begin(), v.end(), 3) - v.begin() << endl;
+    cout << "Upper Bound " << upper_bound(v.begin(), v.end(), 4) - v.begin() << endl;
+
+    // swap(a,b) for swapping two variables
+
+    string ab = "abcd";
+    reverse(ab.begin(), ab.end());
+    cout << "reversed string => " << ab << endl;
+
+    // rotate a vector
+
+    /* Left Rotation: To rotate left, we need to add the vector index.
+        For example, you have to rotate the vector left 3 times.
+        The 3rd index of the vector becomes the first element. vec.begin() + 3 will rotate vector 3 times left.
+    */
+    rotate(v.begin(), v.begin() + 4, v.end());
+    cout << "after left rotate : " << endl;
+    for (auto i : v)
+    {
+        cout << i << endl;
+    }
+
+    cout << endl;
+    /* Right Rotation: To rotate right, we need to subtract the vector index.
+    For example, you have to rotate the vector right 3 times.
+    The 3th last index of the vector becomes the first element. vec.begin()+vec.size()-3 will rotate vector 3 times right.
+    */
+
+    //     first: A forward iterator pointing the position of the first element in the range to be rotated.
+
+    // middle: A forward iterator addressing to the element within the range [first, last) that is moved to the first position in the range.
+
+    // last: A forward iterator pointing the position one past the final element in the range in which the elements are being reversed.
+
+    vector<int> v2;
+
+    v2.push_back(1);
+    v2.push_back(2);
+    v2.push_back(3);
+    v2.push_back(4);
+    v2.push_back(5);
+    v2.push_back(6);
+    rotate(v2.begin(), v2.begin() + v2.size() - 3, v2.end());
+    cout << "after right rotate : " << endl;
+    for (auto i : v2)
+    {
+        cout << i << endl;
+    }
+
+    cout << endl;
+
+    int arr[] = {1, 5, 8, 9, 6, 7, 3, 4, 2, 0};
+    int length = sizeof(arr) / sizeof(arr[0]); // length= (40/4) => 10
+
+    /*Here we take two parameters, the beginning of the
+    array and the length  upto which we want the array to
+    be sorted*/
+    sort(arr, arr + length);
+
+    cout << "\nArray after sorting using "
+            "default sort is : \n";
+    for (int i = 0; i < length; ++i)
+    {
+        cout << arr[i] << " ";
+    }
+
     return 0;
 }
