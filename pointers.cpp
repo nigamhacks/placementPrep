@@ -1,4 +1,4 @@
-//not running
+//not running in c++ ext
 #include<iostream>
 using namespace std;
 
