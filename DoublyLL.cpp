@@ -1,3 +1,4 @@
+// segmentation fault in deletion
 #include <iostream>
 using namespace std;
 class node
@@ -47,11 +48,11 @@ void insertAtTail(node *&head, int val)
 
 void display(node *head)
 {
-    node *temp = head;
-    while (temp->next != NULL)
+
+    while (head != NULL)
     {
-        cout << temp->data << " ";
-        temp = temp->next;
+        cout << head->data << " ";
+        head = head->next;
     }
     cout << endl;
 }
@@ -67,5 +68,6 @@ int main()
     display(head);
     insertAtHead(head, 5);
     display(head);
+
     return 0;
 }
