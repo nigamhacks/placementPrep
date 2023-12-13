@@ -1,4 +1,4 @@
-//Append last K nodes to of a linked list 
+//Append last K nodes of a linked list 
 //  1-2-3-4-5-6
 //  4-5-6-1-2-3
 #include<iostream>
@@ -69,6 +69,9 @@ int length(node *head){
     return l;
 
 }
+
+//kappend
+
 node* kappend(node *&head, int k){
     node *newHead;
     node *newTail;
