@@ -1,5 +1,5 @@
 // Concept Practice Question
-// key notes head is the first node of the linked...
+// key notes-> head is the first node of the linked...
 // list which stores only the address next node which contains values. 
 #include<iostream>
 using namespace std;
