@@ -20,8 +20,7 @@ node* buildTree(node* root){
     if (data==-1){
         return NULL; 
     }
-    cout<<"Enter data for inserting in left " <<data<<endl;
-    root->left=buildTree(root->left);
+    cout<<"Enter data for inserting in lefpft);
     cout<<"Enter data for inserting in right " <<data<<endl;
     root->right=buildTree(root->right);
     return root;
