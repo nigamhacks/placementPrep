@@ -75,7 +75,13 @@ void deletion(Node *&tail, int value){
             curr=curr->next;
         }
         prev->next=curr->next;
-        if(tail==curr){
+        
+        //one node linked list
+        if(curr==prev){
+            tail=NULL;
+        }
+        // node >=2 linked list 
+        else if(tail==curr){
             tail=prev;
         }
         curr->next=NULL;
