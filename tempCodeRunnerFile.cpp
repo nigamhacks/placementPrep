@@ -1,9 +1,8 @@
-~Node(){
-    int value=this->data;
-    //freed memory 
-    if(this->next!=NULL){
-        delete next;
-        this->next=NULL;
-    }
-    cout<<"memory is free for node with data "<< value <<endl;
+
 }
+
+
+int stack :: pop(int x){
+    if(top ==-1){
+        cout<<"stack is empty"<<endl;
+        return 0;
