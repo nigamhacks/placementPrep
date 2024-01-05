@@ -2,12 +2,12 @@
 using namespace std;
 #define MAX 1000
 
-class stack{
-     int top;
+class Stack{
+    int top;
     public:
    
     int a[MAX];
-    stack(){
+    Stack(){
          top=-1;
          }
 
@@ -18,10 +18,10 @@ class stack{
 
 };
 
-bool stack ::  push(int x)
+bool Stack ::  push(int x)
 {
-    if(top>=MAX-1){
-    cout<<"stack overflow"<<endl;
+    if(top>=(MAX-1)){
+    cout<<"Stack overflow"<<endl;
     return false;
     }
     else{
@@ -32,9 +32,9 @@ bool stack ::  push(int x)
 }
 
 
-int stack :: pop(int x){
-    if(top ==-1){
-        cout<<"stack is empty"<<endl;
+int Stack :: pop(){
+    if(top <0){
+        cout<<"Stack is empty"<<endl;
         return 0;
     }
     else{
@@ -43,10 +43,10 @@ int stack :: pop(int x){
     }
 }
 
-int stack :: peek(){
-    if(top ==-1){
-        cout<<"stack is empty "<<endl;
-        return false;
+int Stack :: peek(){
+    if(top < 1){
+        cout<<"Stack is empty "<<endl;
+        return 0;
     }
     else{
         int x = a[top];
@@ -54,13 +54,8 @@ int stack :: peek(){
     }
 }
 
-   bool stack :: isEmpty(){
-    if(a[top]==-1){
-        cout<<"stack is empty"<<endl;
-        return false;
-    }
-    else
-    return true;
+   bool Stack :: isEmpty(){
+    return (top<0);
    }
 
 
@@ -69,5 +64,23 @@ int stack :: peek(){
 int main()
 {
 
+    class Stack s; 
+    s.push(10); 
+    s.push(20); 
+    s.push(30); 
+    cout << s.pop() << " Popped from stack\n"; 
+    
+ 
+    cout << "Top element is : " << s.peek() << endl; 
+    
+   
+    cout <<"Elements present in stack : "; 
+    while(!s.isEmpty()) 
+    { 
+ 
+        cout << s.peek() <<" "; 
+       
+        s.pop(); 
+    } 
     return 0;
 }
