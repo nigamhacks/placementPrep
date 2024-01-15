@@ -26,7 +26,7 @@ int main()
     for(int i=0; i<n; i++){
         f[in[i]]++;
     }
-    for(int i=0;i<n; i++)
+    for(int i=0;i<maxi+1; i++)
     {
         if(f[i]!=0)
         cout<<i <<"->" <<f[i]<<endl;
