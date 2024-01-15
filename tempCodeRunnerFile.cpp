@@ -1,8 +1,1 @@
-
-}
-
-
-int stack :: pop(int x){
-    if(top ==-1){
-        cout<<"stack is empty"<<endl;
-        return 0;
+1 2 2 3 1 4 4 5 6 
