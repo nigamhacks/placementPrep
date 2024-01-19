@@ -20,8 +20,9 @@ node* buildTree(node* root){
     if (data==-1){
         return NULL; 
     }
-    cout<<"Enter data for inserting in left";
-    cout<<"Enter data for inserting in right " <<data<<endl;
+    cout<<"Enter data for inserting in left of "<<data<<endl;
+    root->left=buildTree(root->left);
+    cout<<"Enter data for inserting in right of " <<data<<endl;
     root->right=buildTree(root->right);
     return root;
 }
@@ -86,7 +87,7 @@ void postorder(node *root){
 
 int main()
 {
-    //1 3 7 -1 -1 11 -1 -1 5  17 -1 -1 -1
+    // 1 3 7 -1 -1 11 -1 -1 5  17 -1 -1 -1
     node *root=NULL;
     root=buildTree(root);
     cout<<"printing the levele order traversal output "<<endl;
